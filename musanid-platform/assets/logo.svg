@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1e3a8a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Rounded Badge -->
+  <rect x="25" y="25" width="450" height="450" rx="90" fill="#ffffff" filter="url(#shadow)" stroke="#e2e8f0" stroke-width="4"/>
+  <rect x="40" y="40" width="420" height="420" rx="76" fill="#f8fafc"/>
+
+  <!-- Protective Supporting Hands / Arch (Blue) -->
+  <path d="M 140 280 C 140 180, 220 120, 250 120 C 280 120, 360 180, 360 280 C 360 320, 320 360, 250 360 C 180 360, 140 320, 140 280 Z" 
+        fill="none" stroke="url(#blueGrad)" stroke-width="26" stroke-linecap="round"/>
+
+  <!-- Caring Heart / Growth Blossom (Orange) -->
+  <path d="M 250 250 C 235 215, 195 210, 195 240 C 195 270, 250 310, 250 310 C 250 310, 305 270, 305 240 C 305 210, 265 215, 250 250 Z" 
+        fill="url(#orangeGrad)"/>
+
+  <!-- Central Star / Spark of Potential -->
+  <circle cx="250" cy="185" r="22" fill="url(#orangeGrad)"/>
+  
+  <!-- Modern Accent Rings -->
+  <circle cx="250" cy="250" r="180" fill="none" stroke="#dbeafe" stroke-width="3" stroke-dasharray="10 15"/>
+</svg>

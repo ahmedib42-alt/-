@@ -1,0 +1,337 @@
+/* ========================================================
+   منصة مُسانِد v2.5 - النمط المعياري والأساسي للواجهات
+   المساعد الذكي لمعلم التربية الخاصة والتأهيل
+   ======================================================== */
+
+:root {
+  --brand-blue: #1d4ed8;
+  --brand-blue-dark: #1e3a8a;
+  --brand-blue-light: #3b82f6;
+  --brand-orange: #ea580c;
+  --brand-orange-dark: #c2410c;
+  --brand-orange-light: #f97316;
+  --bg-page: #f8fafc;
+  --shadow-interactive: 0 6px 20px -4px rgba(29, 78, 216, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 20px 35px -8px rgba(29, 78, 216, 0.16), 0 10px 18px -4px rgba(234, 88, 12, 0.12);
+}
+
+* {
+  font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: #0f172a;
+  direction: rtl;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Fullscreen Responsive Containers (Full-Width UI) */
+.wide-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .wide-container {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wide-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Interactive Modern Cards */
+.card-interactive {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  box-shadow: var(--shadow-interactive);
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(29, 78, 216, 0.35);
+}
+
+/* Glassmorphism Header */
+.glass-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1.5px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* Icon Badges */
+.icon-box-lg {
+  width: 56px;
+  height: 56px;
+  border-radius: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06);
+}
+
+.icon-box-blue {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1d4ed8;
+  border: 1.5px solid #bfdbfe;
+}
+.card-interactive:hover .icon-box-blue {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  color: #ffffff;
+  transform: scale(1.06) rotate(3deg);
+}
+
+.icon-box-orange {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  color: #ea580c;
+  border: 1.5px solid #fed7aa;
+}
+.card-interactive:hover .icon-box-orange {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: #ffffff;
+  transform: scale(1.06) rotate(-3deg);
+}
+
+.icon-box-emerald {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  color: #059669;
+  border: 1.5px solid #a7f3d0;
+}
+.card-interactive:hover .icon-box-emerald {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  transform: scale(1.06) rotate(3deg);
+}
+
+.icon-box-purple {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  color: #7e22ce;
+  border: 1.5px solid #e9d5ff;
+}
+.card-interactive:hover .icon-box-purple {
+  background: linear-gradient(135deg, #7e22ce 0%, #6b21a8 100%);
+  color: #ffffff;
+  transform: scale(1.06) rotate(-3deg);
+}
+
+/* Primary & Action Buttons */
+.btn-mukhles-primary, .btn-musanid-primary {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  box-shadow: 0 4px 14px -2px rgba(29, 78, 216, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-mukhles-primary:hover, .btn-musanid-primary:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  box-shadow: 0 8px 20px -2px rgba(29, 78, 216, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-mukhles-orange, .btn-musanid-orange {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  box-shadow: 0 4px 14px -2px rgba(234, 88, 12, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-mukhles-orange:hover, .btn-musanid-orange:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+  box-shadow: 0 8px 20px -2px rgba(234, 88, 12, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-mukhles-subtle, .btn-musanid-subtle {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 700;
+  border-radius: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #cbd5e1;
+}
+.btn-mukhles-subtle:hover, .btn-musanid-subtle:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+/* Navigation Tabs */
+.nav-tab-btn {
+  position: relative;
+  font-weight: 700;
+  padding: 0.65rem 1.15rem;
+  border-radius: 0.875rem;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.nav-tab-btn:hover {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+.nav-tab-btn.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 6px 16px -2px rgba(29, 78, 216, 0.35);
+}
+
+/* Student Avatar Overlay */
+.avatar-drop-zone {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.avatar-drop-zone:hover .avatar-overlay {
+  opacity: 1;
+}
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  backdrop-filter: blur(2px);
+}
+
+/* Body Map Pins */
+.body-pin {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  animation: pulsePin 2s infinite;
+  z-index: 20;
+}
+
+@keyframes pulsePin {
+  0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.7); }
+  70% { transform: translate(-50%, -50%) scale(1.15); box-shadow: 0 0 0 10px rgba(234, 88, 12, 0); }
+  100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
+}
+
+.pin-red { background-color: #ef4444; }
+.pin-amber { background-color: #f59e0b; }
+.pin-purple { background-color: #a855f7; }
+
+/* Custom Toast Notification */
+#toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 9999;
+  transform: translateY(150%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#toast-notification.show {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease forwards;
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print, header, nav, #toast-notification, .btn-mukhles-primary, .btn-musanid-primary, .btn-mukhles-orange, .btn-musanid-orange, .btn-mukhles-subtle, .btn-musanid-subtle, #modal-container {
+    display: none !important;
+  }
+  .card-interactive {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    break-inside: avoid;
+  }
+  .printable-document {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
